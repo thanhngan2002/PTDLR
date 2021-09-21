@@ -18,6 +18,6 @@ geom_histogram()
 # Cau 4: Bieu do boxplot
 ggplot(data = weather, mapping = aes(x = factor(month), y = temp)) +
   geom_boxplot()
-# Cau 5: Bi???u ð??? barplot
+# Cau 5: Bieu do barplot
 ggplot(data = flights, mapping = aes(x = carrier)) +
   geom_bar()
