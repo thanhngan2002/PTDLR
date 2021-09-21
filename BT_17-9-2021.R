@@ -2,7 +2,7 @@ library(nycflights13)
 library(ggplot2)
 library(dplyr)
 # Cau 1: Ve do thi scatter
-# l???c d??? li???u ch??? cho Alaska Airlines
+# lọc dữ liệu chỉ cho Alaska Airlines
 all_alaska_flights <- flights %>% filter(carrier == "AS")
 # Scatterplot
 ggplot(data = all_alaska_flights, mapping = aes(x = dep_delay, y = arr_delay))+
@@ -18,6 +18,6 @@ geom_histogram()
 # Cau 4: Bieu do boxplot
 ggplot(data = weather, mapping = aes(x = factor(month), y = temp)) +
   geom_boxplot()
-# Cau 5: Bi???u �??? barplot
+# Cau 5: Bi???u ð??? barplot
 ggplot(data = flights, mapping = aes(x = carrier)) +
   geom_bar()
