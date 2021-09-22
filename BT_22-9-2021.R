@@ -42,29 +42,29 @@ t.test(igfi~ sex, var.equal=TRUE)
 shapiro.test(igfi)
 wilcox.test(igfi ~ sex)
 # Vi du 12
-# nh???p d??? ki???n
+# # nhập dữ kiện
 before <- c(180, 140, 160, 160, 220, 185, 145, 160, 160, 170)
 after <- c(170, 145, 145, 125, 205, 185, 150, 150, 145, 155)
 bp <- data.frame(before, after)
-# ki???m �???nh t
+# kiểm định t
 t.test(before, after, paired=TRUE)
 t.test(before, after)
 wilcox.test(before, after, paired=TRUE)
 table(sex)
 table(ethnicity)
 table(sex, ethnicity)
-# t???o ra m???t object t�n l� freq �??? ch???a k???t qu??? t???n s???
+# tạo ra một object tên là freq để chứa kết quả tần số
 freq <- table(sex, ethnicity)
-# ki???m tra k???t qu???
+# kiểm tra kết quả
 freq
-# d�ng h�m margin.table �??? xem k???t qu???
+# dùng hàm margin.table để xem kết quả
 margin.table(freq, 1)
 margin.table(freq, 2)
-#t�nh ph???n tr�m b???ng h�m prop.table
+#tính phần trăm bằng hàm prop.table
 prop.table(freq, 1)
-# t�nh ph???n tr�m b???ng h�m prop.table
+# tính phần trăm bằng hàm prop.table
 prop.table(freq, 2)
-# t�nh ph???n tr�m cho to�n b??? b???ng
+# tính phần trăm cho toàn bộ bảng
 freq/sum(freq)
 # Vi du 13
 prop.test(69, 100, 0.50)
