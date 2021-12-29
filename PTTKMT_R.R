@@ -15,7 +15,7 @@ library(ggplot2)
 #plot1
 ggplot(data,aes(x = name,y = price))+
   geom_bar(stat="identity", width=0.5, color="blue", fill = "green")+
-  labs(title = "Bi???u �??? ph�n b??? gi� c???a c�c s???n ph???m")+
+  labs(title = "Biểu đồ phân bố giá của các sản phẩm")+
   xlab("Name")+ylab("Price")+
   theme(text = element_text(size = 4),
         axis.text.x = element_text(angle=50, hjust=1))
@@ -23,14 +23,14 @@ ggplot(data,aes(x = name,y = price))+
 #plot2
 ggplot(data,aes(x = name,y = star))+
   geom_bar(stat="identity", width=0.5,color = "dark green", fill = "red")+ 
-  labs(title = "Bi???u �??? ph�n b??? �i???m ��nh gi� c???a c�c s???n ph???m")+
+  labs(title = "Biểu đồ phân bố điểm đánh giá của các sản phẩm")+
   xlab("Name")+ylab("Star")+
   theme(text = element_text(size = 5),
         axis.text.x = element_text(angle=50, hjust=1))
 #plot3
 ggplot(data,aes(x = name,y = rating))+
   geom_bar(stat="identity", width=0.5, color="green", fill = "yellow")+
-  labs(title = "Bi???u �??? ph�n b??? s??? l�???ng ��nh gi� c�c s???n ph???m c???a c�c s???n ph???m")+
+  labs(title = "Biểu đồ phân bố số lượng đánh giá các sản phẩm của các sản phẩm")+
   xlab("Name")+ylab("Number of Review")+
   theme(text = element_text(size = 6),
         axis.text.x = element_text(angle=50, hjust=1))
@@ -38,17 +38,18 @@ ggplot(data,aes(x = name,y = rating))+
 #plot4
 ggplot(data2[1:10,],aes(x = name,y = price))+
   geom_bar(stat="identity", width=0.5, color="green", fill = "blue")+
-  labs(title = "Bi???u �??? top 10 s???n ph???m c� gi� cao nh???t")+
+  labs(title = "Biểu đồ top 10 sản phẩm có giá cao nhất")+
   xlab("Name")+ylab("price")+
   theme(text = element_text(size = 6),
         axis.text.x = element_text(angle=50, hjust=1))
 #plot5
 ggplot(data1[1:10,],aes(x = name,y = star))+
   geom_bar(stat="identity", width=0.5, color="blue", fill = "orange")+
-  labs(title = "Bi???u �??? top 10 s???n ph???m c� �i???m ��nh gi� cao nh???t")+
+  labs(title = "Biểu đồ top 10 sản phẩm có điểm đánh giá cao nhất")+
   xlab("Name")+ylab("Star")+
   theme(text = element_text(size = 7),
         axis.text.x = element_text(angle=30, hjust=1))
+
 
 
 
